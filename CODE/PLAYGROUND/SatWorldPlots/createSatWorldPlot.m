@@ -1,7 +1,8 @@
 %% ALL GNSS, all satellites, 30min resolution
 % file_path = '..\DATA\ORBIT\2020\365\COM21383.EPH';
 % file_path = '..\DATA\ORBIT\2020\366\COM21384.EPH';
-file_path = '..\DATA\ORBIT\2020\366\WUM0MGXFIN_20203660000_01D_15M_ORB.SP3';
+% file_path = '..\DATA\ORBIT\2020\366\WUM0MGXFIN_20203660000_01D_15M_ORB.SP3';
+file_path = '..\..\..\DATA\ORBIT\2025\060\COD0MGXFIN_20250600000_01D_05M_ORB.SP3';
 % file_path = '..\DATA\ORBIT\2020\365\WUM0MGXFIN_20203650000_01D_15M_ORB.SP3';
 % file_path = '..\DATA\ORBIT\2020\366\TUG0R03FIN_20203660000_01D_05M_ORB.SP3';
 % define geographical resolution
@@ -10,8 +11,8 @@ reso = 1;
 bool_gnss = [0 0  0 1];   	% GPS - GLO - GAL - BDS
 % change epochs for time resolution; e.g. orbit file has every 5min data ->
 % 289 epochs, plot only every 12th epoch for hourly resolution
-% epochs = 1:6:289;     % 5min data interval, plot each 30min
-epochs = 1:2:96;        % 15min data interval, plot each 30min
+epochs = 1:6:289;     % 5min data interval, plot each 30min
+% epochs = 1:2:96;        % 15min data interval, plot each 30min
 % to store output
 N_gps = zeros((360/reso)+1, (360/reso)+1, 48);
 N_glo = N_gps; N_gal = N_gps; N_bds = N_gps;

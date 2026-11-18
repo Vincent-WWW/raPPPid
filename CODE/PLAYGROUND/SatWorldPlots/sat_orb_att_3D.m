@@ -1,10 +1,12 @@
 %% LOAD
 % load precise ephemeris file
 sp3_file = '..\DATA\ORBIT\2023\012\COD0MGXFIN_20230120000_01D_05M_ORB.SP3';
+% sp3_file = '..\..\..\DATA\ORBIT\2024\321\COD0MGXFIN_20243210000_01D_05M_ORB.SP3';
 [~, ~, GAL, ~] = read_precise_eph(sp3_file);
 
 % load attitude from ORBEX file
 orbex_file = '..\DATA\ORBIT\2023\012\COD0MGXFIN_20230120000_01D_30S_ATT.OBX';
+% orbex_file = '..\..\..\DATA\ORBIT\2024\321\COD0MGXFIN_20243210000_01D_30S_ATT.OBX';
 if ~exist([orbex_file '.mat'], 'file')
     OBX = read_orbex(orbex_file);
     save([orbex_file '.mat'], 'OBX');     % save as .mat-file for next processing (faster loading)

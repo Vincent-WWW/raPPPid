@@ -8,7 +8,9 @@
 % 0 = simple values
 % 1 = difference between two epochs
 % 2 = difference of difference between epochs
-derivation = 1;
+% derivation = 1;
+% derivation = 0;
+derivation = 2;
 
 
 
